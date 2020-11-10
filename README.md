@@ -26,8 +26,8 @@ The proposal process
 **A proposal starts with a pull-request to the `design` folder** of this repository
 following the guidelines in this [template](design/_TEMPLATE.md). We expect Conan
 core development team to initiate most of them (other people starting them are
-welcome, but keep in this repository is for substantial changes. If you are not sure
-it is probably better to 
+welcome, but notice this repository is for substantial changes. If you are not sure
+it's probably better to 
 [open an issue in Conan repository](https://github.com/conan-io/conan/issues)).
 
 This is the lifecycle of a proposal:
@@ -36,7 +36,22 @@ This is the lifecycle of a proposal:
    [template in the design folder](design/_TEMPLATE.md). Name the file 
    `###-rfc-title.md` (do not assign a number yet).
 
- * ...
+   If this is affecting only one part of existing proposal, open the pull-request
+   modifying that file.
+
+ * The tribe will be notified about the new proposal or modification.
+
+ * Discussion will be hold in the pull-request itself. Use Github provided features
+   to share your comments and concerns (suggestions, pull-requests reviews, 
+   reactions,...), or even open a pull-request to the origin branch to propose
+   enhacements over existing commits.
+
+ * Attention should focus on existing proposals before moving to new ones. We expect
+   to move forward each proposal after one week if there is enough feedback, being it
+   approved or rejected.
+
+Ready? Have a look to existing ones [here](design/) or to 
+[current ones being considered](https://github.com/conan-io/tribe/pulls).
 
 
 Tribe members
