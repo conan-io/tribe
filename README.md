@@ -89,3 +89,5 @@ will receive special attention:
 | [@ivzhh](https://github.com/ivzhh) | [@ohanar](https://github.com/ohanar) |  |
 
 Special thanks to all of them for joining this effort.
+
+To inquire about the member application process, please send an email to [the Conan team](mailto:info@conan.io?subject=Conan%20Tribe%20Question).
