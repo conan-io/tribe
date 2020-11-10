@@ -1,13 +1,13 @@
 # Conan 2.0 Tribe
 
-It's time to move Conan forward with the help and feedback of the community. During
-the last years Conan has been successfully adopted by many solo programmers and 
-enterprises helping all of to build high-quality applications and improve their 
-development experience. Conan needs another leap forward and the 2.0 release will
-become the next major and stable release integrating everything learned in these years.
+During
+recent years Conan has been successfully adopted by many individual programmers as well as  
+enterprise teams, and helped them all to build their applications more easily and improve their 
+development experience. The Conan team continues to identify new features and areas of improvement
+based on everything we've learned in recent years.
 
 This repository in Github will gather the proposals, substantial features and 
-breaking changes that would arrive to Conan 2.0. This aims to be a collaborative
+breaking changes.  For example, there are several such proposals being evaluated for Conan 2.0, and even after it's release, this repository will continue to be used in the same way for future releases. This aims to be a collaborative
 effort among the tribe members and the development team, trying to understand 
 the needs, the pains and the implications of every feature or breaking change.
 
@@ -36,15 +36,15 @@ This is the lifecycle of a proposal:
    [template in the design folder](design/_TEMPLATE.md). Name the file 
    `###-rfc-title.md` (do not assign a number yet).
 
-   If this is affecting only one part of existing proposal, open the pull-request
+   If this is affecting only one part of the existing proposal, open the pull-request
    modifying that file.
 
  * The tribe will be notified about the new proposal or modification.
 
- * Discussion will be hold in the pull-request itself. Use Github provided features
+ * Discussion will be held in the pull-request itself. Use Github provided features
    to share your comments and concerns (suggestions, pull-requests reviews, 
    reactions,...), or even open a pull-request to the origin branch to propose
-   enhacements over existing commits.
+   enhancements over existing commits.
 
  * Attention should focus on existing proposals before moving to new ones. We expect
    to move forward each proposal after one week if there is enough feedback, being it
@@ -89,4 +89,3 @@ will receive special attention:
 | [@ivzhh](https://github.com/ivzhh) | [@ohanar](https://github.com/ohanar) |  |
 
 Special thanks to all of them for joining this effort.
-
