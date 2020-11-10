@@ -14,7 +14,10 @@ the needs, the pains and the implications of every feature or breaking change.
 We need to evolve Conan, but we want to do it together.
 
 
-> Notice this is not the place for new feature requests, ideas or suggestions. This is the place only for important design, architectural decisions that are derived from already existing feedback and experience, and as such, they have been already matured and discussed previously.
+> Notice this is not the place for new feature requests, ideas or suggestions. 
+  This is the place only for important design, architectural decisions that 
+  are derived from already existing feedback and experience, and as such, they 
+  have been already matured and discussed previously.
 
 
 The proposal process
