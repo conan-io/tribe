@@ -14,7 +14,7 @@ Declare CMake 3.15 as the lowest supported CMake version.
 
 
 ## Motivation
-CMake is one of the main external tool we call from Conan, trasnparent integration and
+CMake is one of the main external tool we call from Conan, transparent integration and
 reliability should be a priority. It is important to declare a minimum supported
 version so we can run all the tests and be confident that the user will get the
 expected results and no regressions will be introduced.
