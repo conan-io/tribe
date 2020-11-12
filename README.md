@@ -90,4 +90,4 @@ will receive special attention:
 
 Special thanks to all of them for joining this effort.
 
-To inquire about the member application process, please send an email to [the Conan team](mailto:info@conan.io?subject=Conan%20Tribe%20Question).
+To inquire about the member application process, please send an email to [the Conan team](mailto:tribe-maintainers@conan.io?subject=Conan%20Tribe%20Question).
