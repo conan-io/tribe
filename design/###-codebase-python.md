@@ -19,10 +19,10 @@ core Conan dependencies will stop to support it, like
 [requests >2.25](https://requests.readthedocs.io/en/latest/community/updates/#id1).
 
 Python 3.6 has also [some valuable features](https://docs.python.org/3/whatsnew/3.6.html)
-that will help to improve the codebase and write more maintenable source:
+that will help to improve the codebase and write more maintainable source:
 
  * Formatted strig literals aka _f-strings_.
- * Type hints for classes and instance varaibles.
+ * Type hints for classes and instance variables.
 
 
 ## Proposal
