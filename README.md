@@ -81,7 +81,7 @@ will receive special attention:
 | [@davidtazy](https://github.com/davidtazy) | [@maikelvdh](https://github.com/maikelvdh) | [@Timen](https://github.com/Timen) |
 | [@dean0x7d](https://github.com/dean0x7d) | [@mapau](https://github.com/mapau) | [@Tsubashi](https://github.com/Tsubashi) |
 | [@detwiler](https://github.com/detwiler) | [@mathbunnyru](https://github.com/mathbunnyru) | [@uboot](https://github.com/uboot) |
-| [@dheater](https://github.com/dheater) | [@michaelmaguire](https://github.com/michaelmaguire) | [@walterj-adsk](https://github.com/walterj-adsk) |
+| [@dheater](https://github.com/dheater) | [@michaelmaguire](https://github.com/michaelmaguire) | [@jason-d-walter](https://github.com/jason-d-walter) |
 | [@DoDoENT](https://github.com/DoDoENT) | [@Minimonium](https://github.com/Minimonium) | [@wizardsd](https://github.com/wizardsd) |
 | [@FabienLaurent](https://github.com/FabienLaurent) | [@monsdar](https://github.com/monsdar) | [@yipdw](https://github.com/yipdw) |
 | [@foundry-markf](https://github.com/foundry-markf) | [@NewProggie](https://github.com/NewProggie) | [@ytimenkov](https://github.com/ytimenkov) |
