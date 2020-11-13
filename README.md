@@ -76,7 +76,7 @@ will receive special attention:
 | [@canmor](https://github.com/canmor) | [@KepptnKool](https://github.com/KepptnKool) | [@sourcedelica](https://github.com/sourcedelica) |
 | [@climblinne](https://github.com/climblinne) | [@KerstinKeller](https://github.com/KerstinKeller) | [@SpoofedEx](https://github.com/SpoofedEx) |
 | [@Da-LiFe](https://github.com/Da-LiFe) | [@kmaragon](https://github.com/kmaragon) | [@steinerthomas](https://github.com/steinerthomas) |
-| [@Daniel-Roberts-Bose](https://github.com/Daniel-Roberts-Bose) | [@mackanhedvall](https://github.com/mackanhedvall) | [@sztomi](https://github.com/sztomi) |
+| [@Daniel-Roberts-Bose](https://github.com/Daniel-Roberts-Bose) | [@markushedvall](https://github.com/markushedvall) | [@sztomi](https://github.com/sztomi) |
 | [@datalogics-kam](https://github.com/datalogics-kam) | [@madebr](https://github.com/madebr) | [@theodelrieu](https://github.com/theodelrieu) |
 | [@davidtazy](https://github.com/davidtazy) | [@maikelvdh](https://github.com/maikelvdh) | [@Timen](https://github.com/Timen) |
 | [@dean0x7d](https://github.com/dean0x7d) | [@mapau](https://github.com/mapau) | [@Tsubashi](https://github.com/Tsubashi) |
