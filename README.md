@@ -69,7 +69,7 @@ will receive special attention:
 | [@aleksa2808](https://github.com/aleksa2808) | [@jcar87](https://github.com/jcar87) | [@raplonu](https://github.com/raplonu) |
 | [@AlexandrePTJ](https://github.com/AlexandrePTJ) | [@jmarrec](https://github.com/jmarrec) | [@rasjani](https://github.com/rasjani) |
 | [@alexFickle](https://github.com/alexFickle) | [@jonatin](https://github.com/jonatin) | [@rconde01](https://github.com/rconde01) |
-| [@AndreasHK](https://github.com/AndreasHK) | [@Jpovedano](https://github.com/Jpovedano) | [@rdeterre](https://github.com/rdeterre) |
+| [@AndreasHK](https://github.com/AndreasHK) | [@jpovedano](https://github.com/jpovedano) | [@rdeterre](https://github.com/rdeterre) |
 | [@barmaglot27](https://github.com/barmaglot27) | [@jsteinhofff](https://github.com/jsteinhofff) | [@rjktcby](https://github.com/rjktcby) |
 | [@bjayanth](https://github.com/bjayanth) | [@Kellya-C](https://github.com/Kellya-C) | [@rockdreamer](https://github.com/rockdreamer) |
 | [@bmanga](https://github.com/bmanga) | [@kenfred](https://github.com/kenfred) | [@saimusdev](https://github.com/saimusdev) |
