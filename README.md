@@ -13,22 +13,24 @@ the needs, the pains and the implications of every feature or breaking change.
 
 We need to evolve Conan, but we want to do it together.
 
+### Important
 
-> Notice this is not the place for new feature requests, ideas or suggestions. 
-  This is the place only for important design, architectural decisions that 
-  are derived from already existing feedback and experience, and as such, they 
-  have been already matured and discussed previously.
+Please, bear in mind this is not the place for new feature requests, ideas, or suggestions. This
+place is only for important design, architectural decisions that are derived from already existing
+feedback and experience, and as such, they have been already matured and discussed previously.
 
 
 The proposal process
 --------------------
 
+We expect the Conan core development team to initiate most of them (other people starting them are
+welcome, but notice this repository is for **substantial changes**. If you are not sure it's probably
+better to [open an issue in the Conan repository](https://github.com/conan-io/conan/issues)). As
+stated above, once those topics are mature after discussing them, they could be a part of a tribe
+proposal in the future.
+
 **A proposal starts with a pull-request to the `design` folder** of this repository
-following the guidelines in this [template](design/_TEMPLATE.md). We expect Conan
-core development team to initiate most of them (other people starting them are
-welcome, but notice this repository is for substantial changes. If you are not sure
-it's probably better to 
-[open an issue in Conan repository](https://github.com/conan-io/conan/issues)).
+following the guidelines in this [template](design/_TEMPLATE.md). 
 
 This is the lifecycle of a proposal:
 
