@@ -88,7 +88,7 @@ will receive special attention:
 | [@FabienLaurent](https://github.com/FabienLaurent) | [@monsdar](https://github.com/monsdar) | [@yipdw](https://github.com/yipdw) |
 | [@foundry-markf](https://github.com/foundry-markf) | [@NewProggie](https://github.com/NewProggie) | [@ytimenkov](https://github.com/ytimenkov) |
 | [@intelligide](https://github.com/intelligide) | [@ngerke](https://github.com/ngerke) | [@zacklj89](https://github.com/zacklj89) |
-| [@ivzhh](https://github.com/ivzhh) | [@ohanar](https://github.com/ohanar) |  |
+| [@ivzhh](https://github.com/ivzhh) | [@ohanar](https://github.com/ohanar) | [@brinkap](https://github.com/brinkap) |
 
 Special thanks to all of them for joining this effort.
 
