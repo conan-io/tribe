@@ -51,3 +51,7 @@ Not known yet.
 
 ## Future Extensions
 Not applicable.
+
+## Comments
+We consider the Python version 3.6 is appropriate as the minimum supported version for the next major version of Conan regarding the
+features supported. Also, the votes reveal a clear consensus on upgrading the Python version without any major concerns in the discussion.
