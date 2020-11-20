@@ -5,7 +5,7 @@
 |:------------------|:--------------------------------------------------|
 | **RFC #**         | [004](https://github.com/conan-io/tribe/pull/4)   |
 | **Submitted**     | 2020-11-12                                        |
-| **Tribe votes**   | 👍 (45) 👎 (7) 👀 (5)                              |
+| **Tribe votes**   | :thumbsup: (45) :thumbsdown: (7) :eyes: (5)       |
 
 ---
 
@@ -30,9 +30,3 @@ CMake 3.15 was [released on July 2019](https://github.com/Kitware/CMake/releases
    when targeting MSVC ABI.
  
 [Link to the full changelog](https://cmake.org/cmake/help/latest/release/3.15.html).
-
-
-## Comments
-This proposal is approved considering that the situation will change from the moment of approval to
-when Conan 2.0 is released. At that moment, we will evaluate user's feedback to check if it's
-necessary to add some workarounds or opt-out behavior for users chained to previous versions. 
