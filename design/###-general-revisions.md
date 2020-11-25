@@ -34,3 +34,7 @@ Use revisions enabled as the default mode in Conan 2.0 and remove support for pa
 revisions:
 - All commands will assume that packages are using revisions, and behave accordingly.
 - Produced files, like lockfiles, will contain the package revisions automatically.
+
+## Detailed Design
+Removing support for packages without revisions, means that Conan servers should use revisions as
+well (Rest HTTP V2 support).
