@@ -3,9 +3,9 @@
 
 | **Status**        | **Accepted**                                      |
 |:------------------|:--------------------------------------------------|
-| **RFC #**         | ###                                               |
+| **RFC #**         | [013](https://github.com/conan-io/tribe/pull/14)   |
 | **Submitted**     | 2020-11-25                                        |
-| **Tribe votes**   |                                                   |
+| **Tribe votes**   | :thumbsup: (52) :thumbsdown: (0) :eyes: (2)       |
 
 ---
 
