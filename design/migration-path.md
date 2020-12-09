@@ -1,10 +1,10 @@
 # Proposal: Migration to Conan 2.0 general guidelines
 
-| **Status**        | **Proposed/Accepted/Deprecated**             |
-|:------------------|:---------------------------------------------|
-| **RFC #**         | ####                                         |
-| **Submitted**     | 2020-11-25                                   |
-| **Dependencies**  | RFC #, #                                     |
+| **Status**        | **Accepted**                                      |
+|:------------------|:--------------------------------------------------|
+| **RFC #**         | [013](https://github.com/conan-io/tribe/pull/13)  |
+| **Submitted**     | 2020-11-25                                        |
+| **Tribe votes**   | :thumbsup: (47) :thumbsdown: (3) :eyes: (0)       |
 
 ---
 
@@ -12,10 +12,12 @@
 This document defines some general principles about the future upgrade to Conan 2.0 path that users will need to do.
 In summary:
 - Conan recipes will implement a subset of syntax and features in Conan 1.X that is fully operational and can run in Conan 2.0 without requiring changes in conanfiles.
-- The command line in Conan 2.0 will change, in a non 1.X backwards compatible way.
+- The command line in Conan 2.0 will change, in a non 1.X backwards compatible way. Conan 1.X command line syntax will be adapted as much as possible to the Conan 2.0 new one, but it might not be completely possible for some cases.
 - Behavior will change, in a non 1.X backwards compatible way.
 - Configuration files might change, in a non 1.X backwards compatible way, but trying to reduce the changes to a minimum.
 - When Conan 2.0 is released, it will become the active series, and Conan 1.X will only get important bug fixes.
+
+Other aspects not commented here, for example, if the Conan cache will be compatible, are unknown at this moment, so they are not included. These things might be discussed later if necessary.
 
 
 ## Motivation
@@ -51,6 +53,9 @@ Some new commands have already started to be designed with some new guidelines f
 command uses always the full path to the files, like ``conan lock create conanfile.py``, because the Conan 2.0 will be more explicit,
 to avoid some confusing ambiguities of the current CLI syntax. But the other commands will need to change, and in most cases, it is
 impossible to do it in a non-breaking way, for example ``conan install path/conanfile.py`` would be incorrectly processed as a ``pkg_name/version``.
+
+The Conan 2.0 new command line will be designed and implemented from scratch, taking the existing 1.X one as a reference, but without being constrained by it, not trying to be backwards compatible. Close to the Conan 2.0
+release, and once the Conan 2.0 CLI is matured enough, an effort will be done to backport it as much as possible to Conan 1.X, and provide an upgrade path that minimizes breaking changes.
 
 ### Behavior will change in 2.0
 
