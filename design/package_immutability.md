@@ -50,4 +50,4 @@ Immutability will be exploited by Conan processes. These are just some examples,
 
 - If the upload detects a revision already exists in a server, it can completely skip the upload, no need to check the contents of the server, it will be assumed identical.
 - Updating and getting the latest revision or version of packages will not require to check the package contents (conanmanifests.txt) or the timestamps, and just the revisions and timestamps of the revisions will be considered for resolving.
-- The concept of “recipe outdated” disappears. It is not possible to have some binaries that are outdated wrt the recipe. The full package reference is “pkg/version@user/channel#recipe_revision:package_id#package_revision”. If the recipe changes, it will requires new binaries
+- The concept of “recipe outdated” disappears. It is not possible to have some binaries that are outdated wrt the recipe. The full package reference is “pkg/version@user/channel#recipe_revision:package_id#package_revision”. If the recipe changes, it will require new binaries.
