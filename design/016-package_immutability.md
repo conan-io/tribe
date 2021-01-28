@@ -4,8 +4,8 @@
 | **Status**        | **Accepted**                                       |
 |:------------------|:---------------------------------------------------|
 | **RFC #**         |  [016](https://github.com/conan-io/tribe/pull/16)  |
-| **Submitted**     | 2020-12-18                 |
-| **Tribe votes**   |                            |
+| **Submitted**     | 2020-12-18                                         |
+| **Tribe votes**   |  :thumbsup: (42) :thumbsdown: (0) :eyes: (4)       |
 
 ---
 
@@ -38,8 +38,8 @@ The immutability applies to the actual file contents: the bytes stored in the di
 
 The clarify about the recipe and package revisions:
 
-- Recipe revision: By default is the recipe contents (recipe + source code, or url to source code). It can also be configured to follow the SCM commit. In principle both are tied, any change done in the recipe or source code implies a change in SCM, and even if in the other direction is not strictly true, in practice it is the same, except some cases in which the developers still want to create a new recipe revision even if nothing changed in recipe or source code.
-- Package revision: Always the hash of the contents of the package (public headers, binaries). A package revision always belong to a given recipe revision + package-id, it is not something that can be detached from it.
+- Recipe revision: By default is the recipe contents (recipe + source code, or url to source code), computed as the hash of the recipe *conanmanifest.txt* file that contains the filenames and hashes. It can also be configured to follow the SCM commit of the repository containing the recipe.
+- Package revision: Always the hash of the contents of the package (public headers, binaries), computed as the hash of the package *conanmanifest.txt* file. A package revision always belong to a given recipe revision + package-id, it is not something that can be detached from it.
 
 
 ## Detailed Design
