@@ -45,7 +45,10 @@ All package references, (including the name, version, user and channel) should b
 
 Then, Conan 2.0 will enforce recipes references (package name, version, user and channel) to be lowercase. They will continue accepting other characters, digits, underscore, dots, etc. but letters inside references should be always lowercase. Any attempt to create a package that is not lowercase will fail. If other mechanisms are employed (directly editing the Conan cache, or changing the server names) to change the reference of any package, that will be a broken one with undefined behavior.
 
+## Detailed Design
+
+One of the challenges of using packages with different casing for same name is the conflicts they generate while installing in the Conan cache in some operating systems. Conan 2.0 will provide a new cache layout that will be able to store these packages with different casing without conflicts. They will still be different, independent packages, and it will not be possible to use them in the same graph, as they will not conflict in the graph, but produce duplicated symbols while linking, but it will be possible to be installed in the cache, highly facilitating the migration to lowercase packages.
 
 ## Migration notes
 
-As changing package names might take some time, Conan 2.0 will introduce a temporary opt-in in conan.conf to allow creating packages non-lowercase. This temporary opt-in doesn’t imply any behavior, all the above limitations of Conan 1.X will persist, and Conan will stop doing checks for OS specific issues, like the Windows one. This opt-in will be removed in later Conan 2.X version.
+As changing package names might take some time, Conan 2.0 will introduce a temporary opt-in in conan.conf to allow creating packages non-lowercase. This temporary opt-in doesn’t imply any behavior, Conan will still be case-sensitive, so they will be treated as completely different packages. But as commented above, the new cache will allow to install them without conflict. This change will make the migration to lowercase package names exactly the same as a major version bump, which is a well known process that can be done with reasonably planning. This opt-in will be removed in later Conan 2.X version, at least 6 months after the Conan 2.0 release (which will still require at least 6 months).
