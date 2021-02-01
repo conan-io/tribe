@@ -1,10 +1,10 @@
 # Proposal: References will be lowercase
 
-| **Status**        |                            |
-|:------------------|:---------------------------|
-| **RFC #**         |                            |
-| **Submitted**     | 2020-12-18                 |
-| **Tribe votes**   |                            |
+| **Status**        | **Accepted**                                      |
+|:------------------|:--------------------------------------------------|
+| **RFC #**         | [017](https://github.com/conan-io/tribe/pull/17)  |
+| **Submitted**     | 2020-12-18                                        |
+| **Tribe votes**   | :thumbsup: (47) :thumbsdown: (3) :eyes: (0)       |
 
 ---
 
