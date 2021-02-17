@@ -32,7 +32,7 @@ This ``conan build`` command was very necessary because the integration with bui
 ## Proposal
 
 - To remove the ``conan package`` command and propose to use ``conan export-pkg`` to test/debug the ``package()`` functionality if necessary.
-- Keep working, providing in ``conan.tools.xxxx`` new tools and toolchains a full working set of helpers to use in the ``generate()`` method, that operate creating files for the user convenience, so users can build directly with their native tools, instead of relying on the ``conan build` command.
+- Keep working, providing in ``conan.tools.xxxx`` new tools and toolchains a full working set of helpers to use in the ``generate()`` method, that operate creating files for the user convenience, so users can build directly with their native tools, instead of relying on the ``conan build`` command.
 - Conan 2.0 will make the ``conan build`` "complete", not using any saved state representation from a previous install. The 3 files ``conaninfo.txt``, ``conanbuildinfo.txt`` and ``graph_info.json`` will not be generated at all locally. The ``conan build`` command will accept the same arguments as ``conan install``, settings, options, profiles, lockfiles and will compute the graph of dependencies in the same way that ``conan install`` would do, and provide the exact same state to the ``build()`` method as if the package was being created in the cache.
 
 NOTE: There are a couple of side use cases, like ``source`` and ``imports`` functionality, that can be relevant but are not as core as the one presented here. Some other proposals can happen regarding these other elements, let's leave those out of this proposal and discussion.
