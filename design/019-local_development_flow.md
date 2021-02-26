@@ -57,6 +57,11 @@ The removal of ``conan package`` and using ``conan export-pkg`` would mean putti
 
 The current ``conan package`` does **not** implement the second use case. Executing ``conan package`` and creating a pseudo-pkg in user space, doesn't make it accessible to be consumed to other packages, so its current use case is only for debugging a problematic ``package()`` method. For that purpose ``conan export-pkg`` in your own cache that you can remove later should work fine. The answer to the second case might not be a ``conan package`` command, but improving the "editable" mode, in which it is not necessary to actually package to consume the headers and libraries of a package put in "editable" mode. If progress cannot be made over this use case (consuming packages that are being built in user space under "edition" mode), then other alternatives could be considered, and this might be revisited.
 
+The``conan package`` will not be removed if some of the cases discussed in https://github.com/conan-io/tribe/pull/19 are not satisfied with other alternatives. Further work will be done in the following areas:
+
+- Considering a multi-level, or 2 level cache that will allow projects to have more easily its own private area to create and test packages without polluting a wider cache that might be shared among other projects (https://github.com/conan-io/conan/issues/5513)
+- Improving the local development flow "editable" use case, with better folder layout definitions
+
 ## Migration notes
 
 ``conan build`` will have some arguments change to be "complete", so if used in CI, it will be necessary to adapt to the new arguments.
