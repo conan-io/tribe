@@ -1,10 +1,10 @@
 # Proposal: Remove manifest check manager
 
-| **Status**        |                          |
-|:------------------|:-------------------------|
-| **RFC #**         |                          |
-| **Submitted**     | 2021-02-04               |
-| **Tribe votes**   |                          |
+| **Status**        | **Accepted**                                      |
+|:------------------|:--------------------------------------------------|
+| **RFC #**         | [018](https://github.com/conan-io/tribe/pull/18)  |
+| **Submitted**     | 2021-02-04                                        |
+| **Tribe votes**   | :thumbsup: (14) :thumbsdown: (0) :eyes: (38)      |
 
 ---
 

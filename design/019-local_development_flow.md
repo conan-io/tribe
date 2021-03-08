@@ -1,10 +1,10 @@
 # Proposal: New local development flow: “conan install” + use your build system
 
-| **Status**        |                                                   |
+| **Status**        |  **Accepted**                                     |
 |:------------------|:--------------------------------------------------|
 | **RFC #**         | [019](https://github.com/conan-io/tribe/pull/19)  |
 | **Submitted**     | 2021-02-05                                        |
-| **Tribe votes**   |                                                   |
+| **Tribe votes**   |  :thumbsup: (34) :thumbsdown: (1) :eyes: (15)     |
 
 ---
 
