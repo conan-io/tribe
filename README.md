@@ -1,14 +1,14 @@
 # Conan 2.0 Tribe
 
 During
-recent years Conan has been successfully adopted by many individual programmers as well as  
-enterprise teams, and helped them all to build their applications more easily and improve their 
+recent years Conan has been successfully adopted by many individual programmers as well as
+enterprise teams, and helped them all to build their applications more easily and improve their
 development experience. The Conan team continues to identify new features and areas of improvement
 based on everything we've learned in recent years.
 
-This repository in Github will gather the proposals, substantial features and 
+This repository in Github will gather the proposals, substantial features and
 breaking changes.  For example, there are several such proposals being evaluated for Conan 2.0, and even after it's release, this repository will continue to be used in the same way for future releases. This aims to be a collaborative
-effort among the tribe members and the development team, trying to understand 
+effort among the tribe members and the development team, trying to understand
 the needs, the pains and the implications of every feature or breaking change.
 
 We need to evolve Conan, but we want to do it together.
@@ -30,12 +30,12 @@ stated above, once those topics are mature after discussing them, they could be 
 proposal in the future.
 
 **A proposal starts with a pull-request to the `design` folder** of this repository
-following the guidelines in this [template](design/_TEMPLATE.md). 
+following the guidelines in this [template](design/_TEMPLATE.md).
 
 This is the lifecycle of a proposal:
 
  * Fork this repo and create a pull-request with your proposal following the
-   [template in the design folder](design/_TEMPLATE.md). Name the file 
+   [template in the design folder](design/_TEMPLATE.md). Name the file
    `###-rfc-title.md` (do not assign a number yet).
 
    If this is affecting only one part of the existing proposal, open the pull-request
@@ -44,7 +44,7 @@ This is the lifecycle of a proposal:
  * The tribe will be notified about the new proposal or modification.
 
  * Discussion will be held in the pull-request itself. Use Github provided features
-   to share your comments and concerns (suggestions, pull-requests reviews, 
+   to share your comments and concerns (suggestions, pull-requests reviews,
    reactions,...), or even open a pull-request to the origin branch to propose
    enhancements over existing commits.
 
@@ -52,7 +52,7 @@ This is the lifecycle of a proposal:
    to move forward each proposal after one week if there is enough feedback, being it
    approved or rejected.
 
-Ready? Have a look to existing ones [here](design/) or to 
+Ready? Have a look to existing ones [here](design/) or to
 [current ones being considered](https://github.com/conan-io/tribe/pulls).
 
 
@@ -89,6 +89,9 @@ will receive special attention:
 | [@foundry-markf](https://github.com/foundry-markf) | [@NewProggie](https://github.com/NewProggie) | [@ytimenkov](https://github.com/ytimenkov) |
 | [@intelligide](https://github.com/intelligide) | [@ngerke](https://github.com/ngerke) | [@zacklj89](https://github.com/zacklj89) |
 | [@ivzhh](https://github.com/ivzhh) | [@ohanar](https://github.com/ohanar) | [@brinkap](https://github.com/brinkap) |
+| [@quazeeee](https://github.com/quazeeee) | [@tonka3000](https://github.com/tonka3000) | [@mrjoel](https://github.com/mrjoel) |
+| [@Gernatch](https://github.com/Gernatch) | [@mpusz](https://github.com/mpusz) | [@ansutremel](https://github.com/ansutremel) |
+| [@SpaceIm](https://github.com/SpaceIm) | [@gayanpathirage](https://github.com/gayanpathirage) |  |
 
 Special thanks to all of them for joining this effort.
 
