@@ -3,7 +3,7 @@
 
 | **Status**        |                                                   |
 |:------------------|:--------------------------------------------------|
-| **RFC #**         | [022](https://github.com/conan-io/tribe/pull/22)  |
+| **RFC #**         | [023](https://github.com/conan-io/tribe/pull/23)  |
 | **Submitted**     | 2021-05-06                                        |
 | **Tribe votes**   |                                                   |
 
@@ -63,6 +63,12 @@ that could be used for build automation within CMake.
 - Also, how the environment is managed, depends on the build/host contexts. In the new mode, ``self.env_info`` from dependencies in the "host"
 context will not automatically be injected during the build, but only the environment from "build_requires".
 This is also ongoing work in the new ``conan.tools.env`` tools.
+
+As discussed in https://github.com/conan-io/tribe/pull/23#issuecomment-843421177, the preferred approach for the default is to apply
+``--profile:build=default`` when no profile-build is defined in command line or configuration.
+
+It will also be possible to define different build and host default profiles in configuration files (at the moment in Conan 1.X there is only
+configuration to define the "host" one).
 
 
 ## Migration plan
