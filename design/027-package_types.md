@@ -62,6 +62,7 @@ The initial proposal is to define the following package types:
 - "application": Executable artifacts, .exe, binaries to run. It will not contain headers, static libraries, or shared libraries to be linked (might contain shared libraries used by the executable, but exclusively for the executable). Not necessary to define it, but it might be informative for recipe readers to realize that such "conanfile.py" is creating an application and not a library.
 - "python-require": This is a pure python recipe, it actually doesn’t contain any package binary or artifact at all.
 - "assets": This package contains some assets, like images, sound files, videos, fonts, configuration files, etc. They are not C/C++ headers, not libraries to link or applications to run.
+- "build-scripts": This package contain some files useful for building. For example, it could be a set of ".cmake" files with utilities that can be called by consumers of this package.
 - "unknown": If the type is not defined explicitly, or cannot be deduced from options
 
 This is just the initial proposal, please report on any other potential package types that you are already managing (better not to speculate, but build on top of actual use cases) and would benefit from an explicit model.
