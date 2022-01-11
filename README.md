@@ -91,7 +91,8 @@ will receive special attention:
 | [@ivzhh](https://github.com/ivzhh) | [@ohanar](https://github.com/ohanar) | [@brinkap](https://github.com/brinkap) |
 | [@quazeeee](https://github.com/quazeeee) | [@tonka3000](https://github.com/tonka3000) | [@mrjoel](https://github.com/mrjoel) |
 | [@Gernatch](https://github.com/Gernatch) | [@mpusz](https://github.com/mpusz) | [@ansutremel](https://github.com/ansutremel) |
-| [@SpaceIm](https://github.com/SpaceIm) | [@gayanpathirage](https://github.com/gayanpathirage) |  |
+| [@SpaceIm](https://github.com/SpaceIm) | [@gayanpathirage](https://github.com/gayanpathirage) | [@datalogics-robb](https://github.com/datalogics-robb)  |
+| [@boussaffawalid](https://github.com/boussaffawalid) | [@sanblch](https://github.com/sanblch) | [@raplonu](https://github.com/raplonu)  |
 
 Special thanks to all of them for joining this effort.
 
