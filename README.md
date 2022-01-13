@@ -93,6 +93,7 @@ will receive special attention:
 | [@Gernatch](https://github.com/Gernatch) | [@mpusz](https://github.com/mpusz) | [@ansutremel](https://github.com/ansutremel) |
 | [@SpaceIm](https://github.com/SpaceIm) | [@gayanpathirage](https://github.com/gayanpathirage) | [@datalogics-robb](https://github.com/datalogics-robb)  |
 | [@boussaffawalid](https://github.com/boussaffawalid) | [@sanblch](https://github.com/sanblch) | [@raplonu](https://github.com/raplonu)  |
+| [@roalter](https://github.com/roalter) | [@sturmf](https://github.com/sturmf) | |
 
 Special thanks to all of them for joining this effort.
 
