@@ -10,11 +10,11 @@
 
 ## Summary
 
-The ``compiler.base`` subsettings mechanism will be removed. Some compilers such has ``intel`` define in *settings.yml* a subsetting called ``base``, that can point to another existing compiler like ``gcc`` or ``msvc`` to which
-it assumes binary compatibility. It doesn't replicate the whole ``gcc`` or ``msvc`` subsettings, but instead uses
-a yaml syntax (e.g: ``<<: *visual_studio``). It also assumed full binary compatibility between the "intel" compiler and the "base" compiler (being it Visual in Windows and gcc in Linux).
+The ``compiler.base`` subsetting mechanism will be removed. Some compilers such as ``intel`` define in *settings.yml* a subsetting called ``base``, that can point to another existing compiler like ``gcc`` or ``Visual Studio`` to which
+it assumes binary compatibility. It doesn't replicate the whole ``gcc`` or ``Visual Studio`` subsettings, but instead uses
+a yaml syntax (e.g: ``<<: *visual_studio``) to effectively copy the "base" compiler settings. It also assumed full binary compatibility between the "intel" compiler and the "base" compiler (being it Visual in Windows and gcc in Linux).
 
-This mechanism will be completely removed. The ``base`` definition will be removed from *settings.yml*. Instead, a full definition of the compiler will be necessary, as the new IntelOneApi (via ``intel-cc`` setting has already been proposed in Conan 1.X). Also, automatic implicit binary compatibility between compilers will be removed.
+This mechanism will be completely removed. The ``base`` definition will be removed from *settings.yml*. Instead, a full definition of the compiler will be necessary, as the new IntelOneApi (via ``intel-cc``) setting has already done in Conan 1.X. Also, automatic implicit binary compatibility between compilers will be removed.
 
 
 ## Motivation
