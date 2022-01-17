@@ -10,7 +10,11 @@
 
 ## Summary
 
-The mechanism of defining that a compiler such as “intel” in the settings.yml definition will kind of extend other existing compilers (such as “intel” having as a base either “gcc” in Linux or “msvc” in Windows) will be removed. Instead, a full definition of the compiler will be necessary, as the new IntelOneApi (via ``intel-cc`` setting has already been proposed in Conan 1.X).
+The ``compiler.base`` subsettings mechanism will be removed. Some compilers such has ``intel`` define in *settings.yml* a subsetting called ``base``, that can point to another existing compiler like ``gcc`` or ``msvc`` to which
+it assumes binary compatibility. It doesn't replicate the whole ``gcc`` or ``msvc`` subsettings, but instead uses
+a yaml syntax (e.g: ``<<: *visual_studio``). It also assumed full binary compatibility between the "intel" compiler and the "base" compiler (being it Visual in Windows and gcc in Linux).
+
+This mechanism will be completely removed. The ``base`` definition will be removed from *settings.yml*. Instead, a full definition of the compiler will be necessary, as the new IntelOneApi (via ``intel-cc`` setting has already been proposed in Conan 1.X). Also, automatic implicit binary compatibility between compilers will be removed.
 
 
 ## Motivation
