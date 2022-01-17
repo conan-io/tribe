@@ -1,11 +1,12 @@
 # Proposal: Define requirements new traits to qualify and enhance the Conan dependencies model
 
 
-| **Status**        |                                                   |
+| **Status**        | **Accepted**                                      |
 |:------------------|:--------------------------------------------------|
 | **RFC #**         | [026](https://github.com/conan-io/tribe/pull/26)  |
 | **Submitted**     | 2021-07-06                                        |
-| **Tribe votes**   |                                                   |
+| **Tribe votes**   | :thumbsup: (33) :thumbsdown: (0) :eyes: (1)       |
+
 
 
 ## Summary

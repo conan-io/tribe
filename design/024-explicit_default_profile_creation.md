@@ -1,11 +1,11 @@
 # Proposal: Do not automatically create a default profile if not existing.
 
 
-| **Status**        |                                                   |
+| **Status**        | **Accepted**                                      |
 |:------------------|:--------------------------------------------------|
 | **RFC #**         | [024](https://github.com/conan-io/tribe/pull/24)  |
 | **Submitted**     | 2021-06-02                                        |
-| **Tribe votes**   |                                                   |
+| **Tribe votes**   | :thumbsup: (37) :thumbsdown: (0) :eyes: (3)       |
 
 
 ## Summary

@@ -1,11 +1,11 @@
 # Proposal: Make alias requires always explicit.
 
 
-| **Status**        |                                                   |
+| **Status**        | **Accepted**                                      |
 |:------------------|:--------------------------------------------------|
 | **RFC #**         | [025](https://github.com/conan-io/tribe/pull/25)  |
 | **Submitted**     | 2021-06-02                                        |
-| **Tribe votes**   |                                                   |
+| **Tribe votes**   | :thumbsup: (7) :thumbsdown: (0) :eyes: (31)       |
 
 
 

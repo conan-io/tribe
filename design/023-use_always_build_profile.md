@@ -1,12 +1,11 @@
 # Proposal: Use always the build_profile and the build and host contexts.
 
 
-| **Status**        |                                                   |
+| **Status**        | **Accepted**                                      |
 |:------------------|:--------------------------------------------------|
 | **RFC #**         | [023](https://github.com/conan-io/tribe/pull/23)  |
 | **Submitted**     | 2021-05-06                                        |
-| **Tribe votes**   |                                                   |
-
+| **Tribe votes**   | :thumbsup: (45) :thumbsdown: (0) :eyes: (6)       |
 
 
 ## Summary

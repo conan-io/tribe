@@ -1,11 +1,11 @@
 # Proposal: Remove cpp_info.config multi-configuration definition
 
 
-| **Status**        |                                                   |
+| **Status**        |  **Accepted**                                     |
 |:------------------|:--------------------------------------------------|
 | **RFC #**         | [021](https://github.com/conan-io/tribe/pull/21)  |
 | **Submitted**     | 2021-03-15                                        |
-| **Tribe votes**   |                                                   |
+| **Tribe votes**   |  :thumbsup: (20) :thumbsdown: (1) :eyes: (28)     |
 
 
 

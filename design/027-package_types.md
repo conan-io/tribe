@@ -1,11 +1,11 @@
 # Proposal: Define Package Types
 
 
-| **Status**        |                                                   |
+| **Status**        | **Accepted**                                      |
 |:------------------|:--------------------------------------------------|
 | **RFC #**         | [027](https://github.com/conan-io/tribe/pull/27)  |
-| **Submitted**     | 2021-07-06                                       |
-| **Tribe votes**   |                                                   |
+| **Submitted**     | 2021-07-06                                        |
+| **Tribe votes**   | :thumbsup: (28) :thumbsdown: (0) :eyes: (3)       |
 
 
 ## Summary

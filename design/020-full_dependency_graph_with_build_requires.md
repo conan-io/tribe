@@ -1,10 +1,11 @@
 # Proposal: Dependency graph will always be computed completely, including build-requires.
 
-| **Status**        |                                                   |
+| **Status**        |  **Accepted**                                     |
 |:------------------|:--------------------------------------------------|
 | **RFC #**         | [020](https://github.com/conan-io/tribe/pull/20)  |
 | **Submitted**     | 2021-03-15                                        |
-| **Tribe votes**   |                                                   |
+| **Tribe votes**   |  :thumbsup: (45) :thumbsdown: (2) :eyes: (0)      |
+
 
 ## Summary
 
