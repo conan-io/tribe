@@ -9,10 +9,12 @@
 
 
 ## Summary
+
 Remove the ``package_revision_mode`` from the ``default_package_id_mode`` and from the ``package_id()`` method definitions. The package revision will never be part of the "package_id" of consumers.
 
 
 ## Motivation
+
 When we realized that the default computation of the "package_id" in Conan 1.X was not enough for the majority of cases, different strategies to compute the "package_id" were introduced.
 
 Initially the implemented strategy was "semver" mode, which, according to the semver specification, meant that only changes to the major version were breaking. Accordingly, such default "semver_mode" converted the dependencies from ``zlib/1.2.11@user/table`` to ``zlib/1.Y.Z``, and that was the actual string being hashed. That means that using a minor or patch version of zlib, like ``zlib/1.2.12`` if it existed, will result in the same "package_id" of the consumer, and thus the same binary.
