@@ -14,8 +14,11 @@ Conan 2.0 will implement Visual Studio compiler support via the ``msvc`` compile
 will use the compiler version instead of the IDE version. The legacy ``Visual Studio`` compiler
 setting will be dropped.
 
-The built-in build system integration to Visual Studio, provided by ``from conan.tools.microsoft`` (``MSBuildDeps``, etc), will provide full support down to Visual Studio 2017 (15, toolset v150),
-and partial support to Visual Studio **toolset v140** from Visual Studio 2017 and above (but not from the Visual Studio 2015 IDE).
+The supported versions will be:
+- Visual Studio 2017 will have tested (in Conan CI) support, both for the ``MSBuild`` and ``CMake`` integrations.
+- Visual Studio 2015 will have community-tested support both for ``MSBuild`` and ``CMake`` integrations.
+- Visual Studio 2012 will have community-tested support for ``CMake`` integrations.
+This support will be stable and not dropped. The necessary features to support toolsets like ``v141_xp`` will be added to ``msvc`` settings.
 
 
 ## Motivation
@@ -28,6 +31,9 @@ The new ``msvc`` compiler setting has already been introduced as experimental in
 a few iterations, it seems it is a valid approach, and it could be moved forward. Now it seems based
 on the accumulated experience, we could define some base Visual Studio support in Conan 2.0.
 
+This initial proposal was limited to 2017 tested support and 2015 community support via CMake, but has been expanded after some
+extra testing in https://github.com/conan-io/conan/pull/10808, and validation by some users.
+
 
 ## Detailed Design
 
@@ -35,11 +41,12 @@ The Conan built-in settings define the new compiler ``msvc`` as:
 
 ```yaml
     msvc:
-        version: [190, 191, 192, 193]
+        version: [170, 180, 190, 191, 192, 193]
         update: [None, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
         runtime: [static, dynamic]
         runtime_type: [Debug, Release]
-        cppstd: [14, 17, 20, 23]
+        cppstd: [98, 14, 17, 20, 23]
+        toolset: [None, v110_xp, v120_xp, v140_xp, v141_xp]
 ```
 
 The ``version`` fields matches the first 3 digits of the [msvc compiler version](https://en.wikipedia.org/wiki/Microsoft_Visual_C%2B%2B):
@@ -62,6 +69,10 @@ accordingly the ``runtime_type`` specifies the Debug/Release variant of this sam
 
 - The latest Conan 1.X release already implements ``msvc`` support for the new build system integrations.
 - The previous ``Visual Studio`` setting will be removed in Conan 2.0
+
+The integration of LLVM/Clang compilers via VS toolset might be provided by the ``compiler=clang`` setting and adding more information to that
+compiler, because the actual compiler is clang, not Microsoft cl, following the same rationale applied in the compiler version for ``msvc``, the
+important bit is the compiler not the IDE and not the build system.
 
 
 ## Migration plan
