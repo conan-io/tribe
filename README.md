@@ -95,7 +95,7 @@ will receive special attention:
 | [@boussaffawalid](https://github.com/boussaffawalid) | [@sanblch](https://github.com/sanblch) | [@raplonu](https://github.com/raplonu)  |
 | [@roalter](https://github.com/roalter) | [@sturmf](https://github.com/sturmf) | [@nguoithichkhampha](https://github.com/nguoithichkhampha) |
 | [@Reg-Arvidson-Bose](https://github.com/Reg-Arvidson-Bose) | [@Glenn-Duffy-Bose](https://github.com/Glenn-Duffy-Bose) | [@FnGyula](https://github.com/FnGyula) |
-| [@mmatrosov](https://github.com/mmatrosov) | [@setre14](https://github.com/setre14) |  |
+| [@mmatrosov](https://github.com/mmatrosov) | [@setre14](https://github.com/setre14) | [@mohamedAlaaK](https://github.com/mohamedAlaaK) |
 
 
 Special thanks to all of them for joining this effort.
