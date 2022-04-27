@@ -2,7 +2,7 @@
 
 | **Status**        |                                                   |
 |:------------------|:--------------------------------------------------|
-| **RFC #**         | [031](https://github.com/conan-io/tribe/pull/34)  |
+| **RFC #**         | [034](https://github.com/conan-io/tribe/pull/34)  |
 | **Submitted**     | 2022-04-26                                        |
 | **Tribe votes**   |                                                   |
 
@@ -14,7 +14,7 @@ Conan 2.0 will implement completely new lockfiles, with a new proposal of format
 - Lockfiles files will be json files containing only three lists of ordered references. One list for “host” requires, another list for “build” requires, another list for “python” requires.
 - Lockfiles will no longer contain information about profiles, settings, options (as they did in 1.X)
 - Lockfiles will not contain information about the dependency graph, only ordered lists (ordered by version and revision timestamp) of package references.
-- The default level of locking will be locking down to the recipe reference, that is, including the version and the recipe revision (``pkg/version@user/channel#recipe_revision``), but not the package-id nor the package-revision. This is aligned with the previously accepted proposal of removing the ``package_revision_mode`` (https://github.com/conan-io/tribe/pull/30). Even if implementing lockfiles locking down the package revision will be possible, that will be considered the exception, and the main flows, documentation and behavior will be optimized for locking down to the recipe revision.
+- The default level of locking will be locking down to the recipe reference, that is, including the version and the recipe revision (``pkg/version@user/channel#recipe_revision``), but not the package-id nor the package-revision. This is aligned with the previously accepted Tribe proposal of removing the [``package_revision_mode``](https://github.com/conan-io/tribe/pull/30). Even if implementing lockfiles locking down the package revision will be possible, that will be considered the exception, and the main flows, documentation and behavior will be optimized for locking down to the recipe revision.
 - Locking by default will be non-strict, that is, if some ``requires`` cannot find a matching locked version in the lockfile, it will be resolved normally. A ``--lockfile-strict`` mode will be implemented, but not the default, to enforce finding a match for declared requires in the lockfile or failing otherwise.
 - A single lockfile file can lock multiple configurations, for different OS, compilers, build-types, etc., as long as they belong to the same graph. Lockfiles can be constructed for these multiple configurations incrementally, or they can be merged later. The concept of “lockfile bundles” will no longer be necessary
 - Lockfiles will not be a version definition mechanism, they need to be a “realizable” snapshot of a dependency graph that should be able to be evaluated in the first place. However, they will allow their usage to define overrides or definitions of versions or recipe revisions that will be used if they fit in the valid definition of the original ``requires`` (that is, if the version fits in the version range of the recipe ``requires``, or always for recipe revisions)
@@ -218,6 +218,7 @@ Two flows become possible:
 - Apply the ``app.lock`` that now includes the new ``pkgb/0.2`` downstream to rebuild ``pkgc`` and ``app`` as needed.
 
 Note that these flows do not require complicated structure or storage of multiple lockfiles. Just 1 single lockfile can be enough for the whole process. If the changes are to be tested for multiple, unrelated products (final consumers), then 1 lockfile for each one might be necessary, but still the complexity will be highly reduced.
+
 
 ## Implementation details
 
