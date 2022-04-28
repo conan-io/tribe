@@ -132,7 +132,7 @@ Let's say we have a dependency graph ``app``->``pkgc``->``pkgb``->``pkga``.
 We can capture a lockfile called “pkgb.lock”, while we are developing ``pkgb``, doing some changes to it, or building it in CI, that locks the dependencies of ``pkgb``, that is it will lock ``pkga/0.1`` Something like:
 
 ```bash
-# in the pkgb/conanfile, assuming it ``requires = “pkg/[>0.0]”``
+# in the pkgb/conanfile, assuming it ``requires = “pkga/[>0.0]”``
 conan lock create . --lockfile-out=pkgb.lock
 # this pkgb.lock will contain a locked reference to say ``pkga/0.1``
 # we can apply this lockfile locking only ``pkga`` all the way down:
