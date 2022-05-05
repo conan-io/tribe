@@ -15,7 +15,7 @@ Conan 2.0 will implement completely new lockfiles, with a new proposal of format
 - Lockfiles will no longer contain information about profiles, settings, options (as they did in 1.X)
 - Lockfiles will not contain information about the dependency graph, only ordered lists (ordered by version and revision timestamp) of package references.
 - The default level of locking will be locking down to the recipe reference, that is, including the version and the recipe revision (``pkg/version@user/channel#recipe_revision``), but not the package-id nor the package-revision. This is aligned with the previously accepted Tribe proposal of removing the [``package_revision_mode``](https://github.com/conan-io/tribe/pull/30). Even if implementing lockfiles locking down the package revision will be possible, that will be considered the exception, and the main flows, documentation and behavior will be optimized for locking down to the recipe revision.
-- Locking by default will be non-strict, that is, if some ``requires`` cannot find a matching locked version in the lockfile, it will be resolved normally. A ``--lockfile-strict`` mode will be implemented, but not the default, to enforce finding a match for declared requires in the lockfile or failing otherwise.
+- Locking by default will be strict, that is, if some ``requires`` cannot find a matching locked version in the lockfile, an error will be raised. A ``--lockfile-partial`` mode will be implemented to allow resolving some dependencies ``requires`` even if a match for them cannot be found in the lockfile. It is called ``partial`` because those dependencies that match a locked reference in the lockfile will be locked, but those who doesn't will not be locked, and resolved normally.
 - A single lockfile file can lock multiple configurations, for different OS, compilers, build-types, etc., as long as they belong to the same graph. Lockfiles can be constructed for these multiple configurations incrementally, or they can be merged later. The lockfiles will still not contain information about settings, options or profiles for those different configurations, but they will be able to contain different locked ``requires`` for the different configurations. The concept of “lockfile bundles” will no longer be necessary
 - Lockfiles will not be a version definition mechanism, they need to be a “realizable” snapshot of a dependency graph that should be able to be evaluated in the first place. However, they will allow their usage to define overrides or definitions of versions or recipe revisions that will be used if they fit in the valid definition of the original ``requires`` (that is, if the version fits in the version range of the recipe ``requires``, or always for recipe revisions)
 - Lockfiles will be allowed to evolve and adding new information to them easily, at ``conan install``, ``create``, ``graph``, and ``export`` operations, specifying a ``--lockfile-out=newlockfile`` argument. That will allow evolving lockfiles when changes are done to the graph, while keeping control on those changes.
@@ -44,10 +44,10 @@ pkg/[>=0.0 <1.0]
 And existing ``pkg/0.1`` then:
 
 ```bash
-conan lock create .  --lockfile-out=conan.lock
-# this will create a lockfile with a “requires” list containing “pkg/0.1”
+conan lock create . --lockfile-out=conan.lock
+# this will create a "conan.lock" lockfile with a “requires” list containing “pkg/0.1”
 # no matter if other new version pkg/0.2 in the range is created now
-# this will keep resolving to “pkg/0.1”
+# this "conan install" will keep resolving to “pkg/0.1”
 conan install . --lockfile=conan.lock
 ```
 
@@ -65,18 +65,21 @@ pkg/[>=1.0 <2.0]
 And assuming a ``pkg/1.1`` version exist, then:
 
 ```bash
-conan install . --lockfile=conan.lock  # will work
+conan install .  --lockfile=conan.lock
 ```
 
-Will not fail by default, and will be able to resolve to ``pkg1.1``. This is because the default mode is non-strict. One of the most frustrating behaviors of Conan 1.X lockfiles was when lockfiles didn’t allow you to do modifications to your conanfiles and keep working.
+Will fail by default, and will not be able to resolve to ``pkg/1.1``. 
+It will throw an error saying that the requirement ``pkg/[>=1.0 <2.0]`` cannot be found in the lockfile
+
+This is because the default mode is strict. One of the most frustrating behaviors of Conan 1.X lockfiles was when lockfiles didn’t allow you to do modifications to your conanfiles and keep working, so this is allowed now if desired.
 
 If we do:
 
 ```bash
-conan install . --lockfile=conan.lock --lockfile-strict # will not work
+conan install . --lockfile=conan.lock --lockfile-partial # will work
 ```
 
-It will throw an error saying that the requirement ``pkg/[>=1.0 <2.0]`` cannot be found in the lockfile
+This will now be able to resolve to ``pkg/1.1``
 
 ### Multi-configuration lockfiles
 
@@ -137,14 +140,14 @@ conan lock create . --lockfile-out=pkgb.lock
 # this pkgb.lock will contain a locked reference to say ``pkga/0.1``
 # we can apply this lockfile locking only ``pkga`` all the way down:
 # moving to pkgc repo/folder
-conan install . --lockfile=pkgb.lock
+conan install . --lockfile=pkgb.lock --lockfile-partial
 # this will lock only pkga/0.1, pkgb is not necessarily locked, we didn’t capture it
 # moving to app repo/folder
-conan install . --lockfile=pkgb.lock
+conan install . --lockfile=pkgb.lock --lockfile-partial
 # this will lock only pkga/0.1, pkgb is not necessarily locked, we didn’t capture it
 ```
 
-In all the above cases, the lockfile contains ``pkga/0.1``, so when executing the different ``conan install --lockfile=pkgb.lock`` in differents ``pkgc`` or ``app`` repos, it will lock exclusively the ``pkga/0.1``, but not the other dependencies in the graph, as they were not added to the graph (it is possible to add them, it will be shown later, but they were not added in this example).
+In all the above cases, the lockfile contains ``pkga/0.1``, so when executing the different ``conan install --lockfile=pkgb.lock`` in differents ``pkgc`` or ``app`` repos, it will lock exclusively the ``pkga/0.1``, but not the other dependencies in the graph, as they were not added to the graph (it is possible to add them, it will be shown later, but they were not added in this example). As the lockfile is not complete, and it is not locking the full dependency graph, some ``requires`` cannot be found in the lockfile, it is necessary to pass the ``--lockfile-partial`` argument.
 
 With this in mind, it is then possible to define manually a lockfile with just one single package reference locked, and apply it later to resolve a full graph. Only the defined locked version will be used, while the rest of the graph will be evaluated as always, without locks. 
 A ``conan lock add`` command will be provided, so it is more convenient to add things to lockfiles.
@@ -168,7 +171,7 @@ conan create . --lockfile=pkgb.lock --lockfile-out=pkgb.lock
 
 We have commented above that a ``conan lock add`` operation will be possible, to manually add a version. In the same spirit, it will also be possible to ``conan lock merge`` different lockfiles, as long as those lockfiles belong to the same dependency graph, partially or totally. But they should have shared some common root at some point in time.
 
-These modifications basically add new versions to an existing lockfile, but as such lockfile can be used for different configurations, it doesn’t remove non-used locked references automatically. In order to clean and strip unused references from a lockfile, an explicit ``conan lock create --clean`` creation of a lockfile will be possible.
+These modifications basically add new versions to an existing lockfile, but as such lockfile can be used for different configurations, it doesn’t remove non-used locked references automatically. In order to clean and strip unused references from a lockfile, an explicit ``conan lock create --lockfile-clean`` creation of a lockfile will be possible.
 
 ### Lockfiles in CI
 
@@ -219,6 +222,29 @@ Two flows become possible:
 
 Note that these flows do not require complicated structure or storage of multiple lockfiles. Just 1 single lockfile can be enough for the whole process. If the changes are to be tested for multiple, unrelated products (final consumers), then 1 lockfile for each one might be necessary, but still the complexity will be highly reduced.
 
+
+### Defaults
+
+To improve the UX, the following defaults will be implemented:
+
+- The default lockfile name is ``conan.lock``.
+- If a ``conan.lock`` file is found in the folder besides a ``conanfile``, it will be automatically used, as if ``--lockfile=conan.lock`` argument is typed in the command line.
+- ``conan lock create`` will default to generate ``conan.lock``, no need to specify ``--lockfile-out``. It will also generate it in the default location, that is, besides the ``conanfile`` that is locking.
+- For commands that doesn't require a ``conanfile``, like ``conan install --requires=pkg/version``, the ``conan.lock`` will still be the default, but its location will be defaulted to the current working directory.
+
+With these defaults, many of the above commands will be simplified, they were left above in their full mode because it is more explicit and easier to understand in this proposal context.
+
+Example of these defaults:
+
+```bash
+# equivalent to have "conan lock create --lockfile-out=conan.lock"
+$ conan lock create .  # creates "conan.lock" besides the conanfile
+# equivalent to have "conan lock create --lockfile=conan.lock --lockfile-out=conan.lock ..."
+$ conan lock create . -s build_type=Debug -s arch=x86  # different confs
+$ mkdir build && cd build
+# equivalent to have "conan install --lockfile=conan.lock"
+$ conan install .. # This will use the lockfile generated above
+```
 
 ## Implementation details
 
