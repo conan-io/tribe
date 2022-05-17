@@ -27,7 +27,7 @@ that will help to improve the codebase and write more maintainable source:
 
  There is also a support problem when Python officially declares versions EOL, because 
  dependencies stop supporting those versions and can break the Conan application. Conan
- can pin and restrict the usage of those dependencies, but that also has security implications,
+ can pin and restrict the usage of those dependencies newer versions, but that also has security implications,
  so it is not something that should be extended too much over time.
 
 
@@ -40,7 +40,7 @@ About Linux distros: starting on Debian 10 Buster (July 2019), the [Python 3
 version installed is Python 3.7](https://wiki.debian.org/Python). Ubuntu 18.04 (April 2018) already included Python 3.6.
 
 Conan will drop support for Python versions 12 months **after** their official EOL date, that is,
-it will continue testing and supporting one year and a half beyond that date. When one version support
+it will continue testing and supporting one year beyond that date. When one version support
 becomes deprecated, the next Python version will be used as the minimum tested and supported one. 
 
 
