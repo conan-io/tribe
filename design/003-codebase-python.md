@@ -9,7 +9,8 @@
 ---
 
 ## Summary
-Declare **Python 3.6** as the minimum Python version supported.
+Declare **Python 3.6** as the minimum Python version supported for Conan 2.0 launch.
+Declare a Python version support policy for 12 months after the minimum supported version has officially become End Of Life (EOL).
 
 
 ## Motivation
@@ -24,6 +25,11 @@ that will help to improve the codebase and write more maintainable source:
  * Formatted string literals a.k.a. _f-strings_.
  * Type hints for classes and instance variables.
 
+ There is also a support problem when Python officially declares versions EOL, because 
+ dependencies stop supporting those versions and can break the Conan application. Conan
+ can pin and restrict the usage of those dependencies newer versions, but that also has security implications,
+ so it is not something that should be extended too much over time.
+
 
 ## Proposal
 Python 3.6 will be the minimal supported version. Conan 2.0 is expected to be released
@@ -32,6 +38,10 @@ on 2021, by that date Python 3.6 will be the oldest release alive (EOL on Decemb
 
 About Linux distros: starting on Debian 10 Buster (July 2019), the [Python 3
 version installed is Python 3.7](https://wiki.debian.org/Python). Ubuntu 18.04 (April 2018) already included Python 3.6.
+
+Conan will drop support for Python versions 12 months **after** their official EOL date, that is,
+it will continue testing and supporting one year beyond that date. When one version support
+becomes deprecated, the next Python version will be used as the minimum tested and supported one. 
 
 
 ## Alternative Approaches
